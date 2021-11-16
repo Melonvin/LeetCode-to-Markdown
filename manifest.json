@@ -1,22 +1,18 @@
 {
-  "manifest_version": 2,
   "name": "LeetCode to Markdown",
-  "description": "This extension demonstrates a browser action with kittens.",
-  "version": "1.0",
+  "action": {},
+  "manifest_version": 3,
+  "version": "0.1",
+  "description": "Convert LeetCode questions to markdown when you click the icon",
   "permissions": [
-    "https://leetcode-cn.com/*"
+    "activeTab",
+    "scripting"
   ],
-  "browser_action": {
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
     "default_icon": "icon.png"
   },
-  "content_scripts": [
-    {
-      "matches": [
-        "https://leetcode-cn.com/*"
-      ],
-      "js": [
-        "script.js"
-      ]
-    }
-  ]
+  "host_permissions": ["https://leetcode-cn.com/*"]
 }
