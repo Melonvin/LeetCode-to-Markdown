@@ -27,7 +27,9 @@ function convertHtmlToMarkdown() {
       .replaceAll('<li>', '- ')
       .replaceAll('</li>', '')
       .replaceAll('&lt;', '<')
-      .replaceAll('\t', '');
+      .replaceAll('\t', '')
+      .replaceAll('<sup>', '^')
+      .replaceAll('</sup>', '');
     res = res + `${temp}\n\n`
   }
 
