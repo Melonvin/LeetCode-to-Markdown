@@ -1,6 +1,8 @@
 function convertHtmlToMarkdown() {
   // 获取标题
-  let title = document.querySelector("h4[data-cypress='QuestionTitle'] a").innerText.replaceAll(' ', '')
+  // let title = document.querySelector("h4[data-cypress='QuestionTitle'] a").innerText.replaceAll(' ', '')
+  let title = document.querySelector("h4[data-cypress='QuestionTitle'] a").innerText
+  console.log(title);
   const url = window.location.href
   title = `# [${title}](${url})`
 
